@@ -1571,7 +1571,7 @@ sub ProcessSophosSAVIOutput {
   $logout =~ s/\s{20,}/ /g;
   #$logout =~ s/%/%%/g;
 
-  ($keyword, $virusname, $filename) = split(/:: /, $line, 3);
+  ($keyword, $virusname, $filename) = split(/:: /, $line, 2);
 
   if ($keyword =~ /^error/i) {
     ($dot, $id, $part, @rest) = split(/\//, $filename);
